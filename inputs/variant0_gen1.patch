@@ -1,0 +1,19 @@
+diff --git a/CI/physmon/physmon_common.py b/CI/physmon/physmon_common.py
+--- a/CI/physmon/physmon_common.py
++++ b/CI/physmon/physmon_common.py
+@@ -42,13 +42,8 @@
+ 
+     args = parser.parse_args()
+ 
+-    matMapPath = (
+-        Path(tempfile.gettempdir()) / "odd-material-maps-gen3-provisional.json.zst"
+-    )
+-    urllib.request.urlretrieve(PROVISIONAL_GEN3_MATERIAL_MAP_URL, matMapPath)
+-    matDeco = acts.IMaterialDecorator.fromFile(matMapPath, level=acts.logging.INFO)
+-
+-    detector = getOpenDataDetector(matDeco)
++    # Gen1 comparison run: default (Gen1) ODD material map
++    detector = getOpenDataDetector(gen3=False)
+     trackingGeometry = detector.trackingGeometry()
+     decorators = detector.contextDecorators()
+     field = detector.field

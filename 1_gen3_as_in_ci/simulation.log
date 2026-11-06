@@ -1,0 +1,428 @@
+Warning in <TGeoMixture::ComputeDerivedQuantities>: Mixture PE: sum of weights is: 6
+DD4hep           WARN  ++ STD conditions NOT defined by client. NTP defaults taken.
+Detector         WARN  +++ Object 'compact_checksum' is already defined. New value will be ignored
+Detector         WARN  +++ Object 'compact_checksum' is already defined. New value will be ignored
+Detector         WARN  +++ Object 'compact_checksum' is already defined. New value will be ignored
+11:21:10    DD4hepDetect   INFO      OpenDataDetector construct
+11:21:10    DD4hepDetect   INFO      Beampipe element found: BeamPipe
+11:21:10    DD4hepDetect   INFO      Converting barrel-endcap assembly from element: Pixels
+11:21:10    DD4hepDetect   INFO      Converting barrel-endcap assembly from element: ShortStrips
+11:21:10    DD4hepDetect   INFO      Converting barrel-endcap assembly from element: LongStrips
+11:21:10    DD4hepDetect   INFO      [Root]: Building tracking geometry from blueprint tree
+11:21:11    Sequencer      INFO      Create Sequencer (single-threaded)
+11:21:11    Sequencer      INFO      Add Reader 'EventGenerator'
+11:21:11    Sequencer      INFO      -> OutputEvent 'particle_gun_event':
+11:21:11    Sequencer      INFO         shared_ptr<HepMC3::GenEvent>
+11:21:11    Sequencer      INFO      Add Algorithm 'HepMC3InputConverter'
+11:21:11    Sequencer      INFO      <- InputEvent 'particle_gun_event':
+11:21:11    Sequencer      INFO         shared_ptr<HepMC3::GenEvent>
+11:21:11    Sequencer      INFO      -> OutputParticles 'particles_generated':
+11:21:11    Sequencer      INFO         flat_set<SimParticle, detail::CompareParticleId, void>
+11:21:11    Sequencer      INFO      -> OutputVertices 'vertices_input':
+11:21:11    Sequencer      INFO         flat_set<SimVertex, detail::CompareVertexId, void>
+11:21:11    Sequencer      INFO      Add Writer 'RootParticleWriter'
+11:21:11    Sequencer      INFO      <- InputHandle 'particles_generated':
+11:21:11    Sequencer      INFO         flat_set<SimParticle, detail::CompareParticleId, void>
+11:21:11    Sequencer      INFO      Add Algorithm 'FatrasSimulation'
+11:21:11    Sequencer      INFO      <- InputParticles 'particles_generated':
+11:21:11    Sequencer      INFO         flat_set<SimParticle, detail::CompareParticleId, void>
+11:21:11    Sequencer      INFO      -> OutputSimHits 'simhits_fatras':
+11:21:11    Sequencer      INFO         flat_multiset<Hit, detail::CompareGeometryId, void>
+11:21:11    Sequencer      INFO      -> OutputParticles 'particles_fatras':
+11:21:11    Sequencer      INFO         flat_set<SimParticle, detail::CompareParticleId, void>
+11:21:11    Sequencer      INFO      Key 'particles_fatras' aliased to 'particles'
+11:21:11    Sequencer      INFO      Key 'particles_fatras' aliased to 'particles_simulated_selected'
+11:21:11    Sequencer      INFO      Add Writer 'RootParticleWriter'
+11:21:11    Sequencer      INFO      <- InputHandle 'particles_fatras':
+11:21:11    Sequencer      INFO         flat_set<SimParticle, detail::CompareParticleId, void>
+11:21:11    Sequencer      INFO      Add Writer 'RootSimHitWriter'
+11:21:11    Sequencer      INFO      <- InputHandle 'simhits_fatras':
+11:21:11    Sequencer      INFO         flat_multiset<Hit, detail::CompareGeometryId, void>
+<<< Geant4 Physics List simulation engine: FTFP_BERT
+
+
+**************************************************************
+ Geant4 version Name: geant4-11-04-patch-02 [MT]   (12-June-2026)
+                       Copyright : Geant4 Collaboration
+                      References : NIM A 506 (2003), 250-303
+                                 : IEEE-TNS 53 (2006), 270-278
+                                 : NIM A 835 (2016), 186-225
+                             WWW : http://geant4.org/
+**************************************************************
+
+Geant4VolumeManager       +++ Populating Geant4 volume manager.
+Geant4VolumeManager       +++ Geant4 volume manager populated with 22856 sensitive path entries.
+11:21:11    Geant4Simula   INFO      Setting ACTS configured field to Geant4.
+ G4ChordFinder: stepperDriverId: 2
+11:21:11    Geant4Simula   INFO      Remapping selected volumes from Geant4 to Acts::Surface::GeometryID
+11:21:11    SensitiveSur   INFO      Number of overall sensitive surfaces: 18824
+11:21:11    SensitiveSur   INFO      Number of mapped volume->surface mappings: 18824
+11:21:11    SensitiveSur   INFO      Number of sensitive surfaces that are not mapped: 0
+11:21:11    SensitiveSur   INFO      Number of G4 volumes without a matching Surface: 2304
+11:21:11    Sequencer      INFO      Add Algorithm 'Geant4Simulation'
+11:21:11    Sequencer      INFO      <- InputParticles 'particles_generated':
+11:21:11    Sequencer      INFO         flat_set<SimParticle, detail::CompareParticleId, void>
+11:21:11    Sequencer      INFO      -> OutputParticles 'particles_geant4':
+11:21:11    Sequencer      INFO         flat_set<SimParticle, detail::CompareParticleId, void>
+11:21:11    Sequencer      INFO      -> OutputSimHIts 'simhits_geant4':
+11:21:11    Sequencer      INFO         flat_multiset<Hit, detail::CompareGeometryId, void>
+11:21:11    Sequencer      INFO      Key 'particles_geant4' aliased to 'particles'
+11:21:11    Sequencer      INFO      Key 'particles_geant4' aliased to 'particles_simulated_selected'
+11:21:11    Sequencer      INFO      Add Writer 'RootParticleWriter'
+11:21:11    Sequencer      INFO      <- InputHandle 'particles_geant4':
+11:21:11    Sequencer      INFO         flat_set<SimParticle, detail::CompareParticleId, void>
+11:21:11    Sequencer      INFO      Add Writer 'RootSimHitWriter'
+11:21:11    Sequencer      INFO      <- InputHandle 'simhits_geant4':
+11:21:11    Sequencer      INFO         flat_multiset<Hit, detail::CompareGeometryId, void>
+11:21:11    Sequencer      INFO      Processing events [0, 1000)
+11:21:11    Sequencer      INFO      Starting event loop with 1 threads
+11:21:11    Sequencer      INFO        0 context decorators
+11:21:11    Sequencer      INFO        9 sequence elements
+11:21:11    Sequencer      INFO        1 readers
+11:21:11    Sequencer      INFO        3 algorithms
+11:21:11    Sequencer      INFO        5 writers
+### Adding tracking cuts for neutron  TimeCut(ns)= 10000  KinEnergyCut(MeV)= 0
+11:21:20    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:20    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:20    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:20    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:20    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:21    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:21    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:21    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:21    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:21    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:21    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:21    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:21    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:22    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:22    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:22    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:22    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:22    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:22    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:22    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:22    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:22    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:22    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:22    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:22    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:22    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:22    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:22    Sequencer      INFO      100 / 1000 events processed
+11:21:22    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:22    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:22    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:23    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:23    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:23    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:23    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:23    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:23    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:23    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:24    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:24    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:24    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:24    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:24    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:24    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:24    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:24    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:24    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:24    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:24    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:24    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:24    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:24    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:24    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:24    Sequencer      INFO      200 / 1000 events processed
+11:21:24    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:25    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:25    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:25    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:25    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:25    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:25    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:25    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:25    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:25    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:25    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:25    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:26    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:26    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:26    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:26    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:26    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:26    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:26    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:26    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:26    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:26    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:26    Sequencer      INFO      300 / 1000 events processed
+11:21:26    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:26    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:26    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:26    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:26    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:27    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:27    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:27    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:27    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:28    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:28    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:28    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:28    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:28    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:28    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:28    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:28    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:28    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:29    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:29    Sequencer      INFO      400 / 1000 events processed
+11:21:29    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:29    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:29    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:29    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:29    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:29    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:29    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:29    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:29    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:29    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:30    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:30    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:30    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:30    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:30    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:30    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:30    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:30    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:30    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:30    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:30    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:30    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:30    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:30    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:30    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:31    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:31    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:31    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:31    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:31    Sequencer      INFO      500 / 1000 events processed
+11:21:31    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:31    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:31    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:31    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:31    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:31    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:31    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:32    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:32    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:32    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:32    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:32    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:32    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:32    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:32    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:33    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:33    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:33    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:33    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:33    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:33    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:33    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:33    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:33    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:33    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:33    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:33    Sequencer      INFO      600 / 1000 events processed
+11:21:33    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:33    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:33    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:33    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:33    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:33    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:33    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:33    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:33    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:33    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:34    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:34    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:34    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:34    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:34    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:34    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:34    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:34    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:34    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:34    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:34    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:34    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:34    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:34    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:34    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:34    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:34    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:34    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:34    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:34    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:35    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:35    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:35    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:35    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:35    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:35    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:35    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:35    Sequencer      INFO      700 / 1000 events processed
+11:21:35    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:35    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:35    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:35    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:35    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:35    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:35    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:35    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:36    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:36    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:36    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:36    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:36    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:36    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:36    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:36    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:36    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:36    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:36    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:36    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:37    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:37    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:37    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:37    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:37    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:37    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:37    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:37    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:37    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:37    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:37    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:37    Sequencer      INFO      800 / 1000 events processed
+11:21:38    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:38    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:38    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:38    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:38    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:38    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:38    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:38    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:38    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:38    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:38    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:39    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:39    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:39    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:39    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:39    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:39    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:39    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:39    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:39    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:39    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:39    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:39    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:39    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:39    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:39    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:39    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:39    Sequencer      INFO      900 / 1000 events processed
+11:21:40    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:40    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:40    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:40    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:40    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:40    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:40    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:40    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:40    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:40    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:40    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:40    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:40    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:40    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:40    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:41    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:41    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:41    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:41    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:41    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:41    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:41    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:41    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:41    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:41    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:41    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:41    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:41    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:41    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:41    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:41    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:41    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:41    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:41    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:41    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:41    Geant4Simula   WARNING   Hit buffer not empty after track
+11:21:41    Sequencer      INFO      1000 / 1000 events processed
+11:21:41    RootParticle   INFO      Wrote particles to tree 'particles' in '/tmp/tmpn35mcs0x/particles.root'
+11:21:41    RootParticle   INFO      Wrote particles to tree 'particles' in '/tmp/tmpn35mcs0x/fatras/particles_simulation.root'
+11:21:42    RootParticle   INFO      Wrote particles to tree 'particles' in '/tmp/tmpn35mcs0x/geant4/particles_simulation.root'
+11:21:42    Sequencer      INFO      No unmasked FPEs encountered
+11:21:42    Sequencer      INFO      Processed 1000 events in 30.368750 s (wall clock)
+11:21:42    Sequencer      INFO      Average time per event: 30.196013 ms/event
+11:21:42    Sequencer      INFO      Timing breakdown:
+| Algorithm                      | Total Time (ms) | Time/Event (ms) | Fraction |
+|:-------------------------------|----------------:|----------------:|---------:|
+| Algorithm:Geant4Simulation     |        29494.51 |           29.49 |    97.7% |
+| Algorithm:FatrasSimulation     |          410.07 |            0.41 |     1.4% |
+| Writer:RootParticleWriter      |           92.25 |            0.09 |     0.3% |
+| Reader:EventGenerator          |           44.73 |            0.04 |     0.1% |
+| Writer:RootSimHitWriter        |           44.50 |            0.04 |     0.1% |
+| Writer:RootSimHitWriter        |           33.97 |            0.03 |     0.1% |
+| Writer:RootParticleWriter      |           26.74 |            0.03 |     0.1% |
+| Algorithm:HepMC3InputConverter |           24.95 |            0.02 |     0.1% |
+| Writer:RootParticleWriter      |           24.29 |            0.02 |     0.1% |
+| TOTAL                          |        30196.01 |           30.20 |   100.0% |
+
+11:21:42    Sequencer      INFO      Create Sequencer (single-threaded)
+/home/lea-baumann/Documents/PhD/ACTS/acts/build/python/acts/examples/pythia8.py:13: UserWarning: Pythia8 example component not available. Try building with ACTS_BUILD_EXAMPLES_PYTHIA8=ON.
+  warnings.warn("Pythia8 example component not available. Try building with ACTS_BUILD_EXAMPLES_PYTHIA8=ON.")
+FPE masks:
+- Fatras/include/ActsFatras/Kernel/detail/SimulationActor.hpp:170: FLTUND: 1
+- Core/src/Vertexing/AdaptiveMultiVertexFinder.cpp:479: FLTUND: 1
+- Core/include/Acts/TrackFitting/detail/GsfComponentMerging.hpp:202: FLTUND: 1
+- Core/include/Acts/TrackFitting/detail/GsfComponentMerging.hpp:252: FLTUND: 1
+- Core/include/Acts/Visualization/Interpolation3D.hpp:65: FLTDIV: 1
+- Core/include/Acts/Visualization/Interpolation3D.hpp:66: FLTINV: 1
+- Examples/Io/Root/src/RootTrackStatesWriter.cpp:601: FLTINV: 1
+FPE masks:
+- Fatras/include/ActsFatras/Kernel/detail/SimulationActor.hpp:170: FLTUND: 1
+- Core/src/Vertexing/AdaptiveMultiVertexFinder.cpp:479: FLTUND: 1
+- Core/include/Acts/TrackFitting/detail/GsfComponentMerging.hpp:202: FLTUND: 1
+- Core/include/Acts/TrackFitting/detail/GsfComponentMerging.hpp:252: FLTUND: 1
+- Core/include/Acts/Visualization/Interpolation3D.hpp:65: FLTDIV: 1
+- Core/include/Acts/Visualization/Interpolation3D.hpp:66: FLTINV: 1
+- Examples/Io/Root/src/RootTrackStatesWriter.cpp:601: FLTINV: 1
+Traceback (most recent call last):
+  File "/tmp/claude-1000/-home-lea-baumann-Documents-PhD-ACTS-acts/b1139b58-b982-47c0-84c5-a03466272fce/scratchpad/ci_state/physmon_simulation.py", line 135, in <module>
+    addPythia8(
+    ~~~~~~~~~~^
+        s,
+        ^^
+    ...<7 lines>...
+        outputDirRoot=tp,
+        ^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/lea-baumann/Documents/PhD/ACTS/acts/build/python/acts/examples/simulation.py", line 337, in addPythia8
+    import acts.examples.pythia8
+  File "/home/lea-baumann/Documents/PhD/ACTS/acts/build/python/acts/examples/pythia8.py", line 5, in <module>
+    from .ActsExamplesPythonBindingsPythia8 import *
+ModuleNotFoundError: No module named 'acts.examples.ActsExamplesPythonBindingsPythia8'

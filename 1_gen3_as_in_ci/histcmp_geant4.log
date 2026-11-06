@@ -1,0 +1,264 @@
+╭────────────────────────────── Comparing files: ──────────────────────────────╮
+│ Monitored:                                                                   │
+│ /home/lea-baumann/Documents/PhD/ACTS/Outputs/physmon_gen3_checks/1_gen3_as_i │
+│ n_ci/particles_geant4_hist.root                                              │
+│ Reference:                                                                   │
+│ /home/lea-baumann/Documents/PhD/ACTS/Outputs/physmon_gen3_checks/reference/p │
+│ articles_geant4_hist.root                                                    │
+╰──────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────── Configuration ────────────────────────────────╮
+│ Config(                                                                      │
+│     checks={                                                                 │
+│         '*': {                                                               │
+│             'Chi2Test': {'threshold': 0.01},                                 │
+│             'KolmogorovTest': {'threshold': 0.68},                           │
+│             'RatioCheck': {'threshold': 3},                                  │
+│             'ResidualCheck': {'threshold': 1},                               │
+│             'IntegralCheck': {'threshold': 3}                                │
+│         }                                                                    │
+│     },                                                                       │
+│     plots=PlotConfig(                                                        │
+│         renderer_3d='voxel',                                                 │
+│         comparison='ratio',                                                  │
+│         comparison_2d3d='pull'                                               │
+│     ),                                                                       │
+│     report=ReportConfig(                                                     │
+│         tags={                                                               │
+│             'Efficiency': ['*eff_*'],                                        │
+│             'Fakes': ['*fakeRatio_*', '*nFake*'],                            │
+│             'Duplicates': ['*duplicationRatio_*', '*nDuplicat*'],            │
+│             'Track quality': [                                               │
+│                 '*completeness_*',                                           │
+│                 '*purity_*',                                                 │
+│                 '*chi2*',                                                    │
+│                 '*Chi2*',                                                    │
+│                 '*NDF*',                                                     │
+│                 '*trackClassification*'                                      │
+│             ],                                                               │
+│             'Track summary': [                                               │
+│                 '*nStates*',                                                 │
+│                 '*nMeasurements*',                                           │
+│                 '*nHoles*',                                                  │
+│                 '*nOutliers*',                                               │
+│                 '*nSharedHits*',                                             │
+│                 '*nMajorityHits*'                                            │
+│             ],                                                               │
+│             'Residuals': [                                                   │
+│                 'res_*',                                                     │
+│                 'resmean_*',                                                 │
+│                 'reswidth_*',                                                │
+│                 'trk_res*',                                                  │
+│                 'resX',                                                      │
+│                 'resY',                                                      │
+│                 'resZ',                                                      │
+│                 'resT',                                                      │
+│                 'resSeed*'                                                   │
+│             ],                                                               │
+│             'Pulls': ['pull*', 'trk_pull*'],                                 │
+│             'Resolution': ['reswidth_*', 'pullwidth_*'],                     │
+│             'Bias': ['resmean_*', 'pullmean_*'],                             │
+│             'Truth': ['t_*', 'truth*', 'trk_truth*'],                        │
+│             'Uncertainties': ['err_*', 'cov*'],                              │
+│             'Vertexing': [                                                   │
+│                 'nRecoVtx',                                                  │
+│                 'nTrueVtx',                                                  │
+│                 'nVtx*',                                                     │
+│                 'nTracks*',                                                  │
+│                 'recoOver*',                                                 │
+│                 'truthVertexMatchRatio',                                     │
+│                 'reco[XYZT]',                                                │
+│                 'seed[XYZT]',                                                │
+│                 'sumPt2',                                                    │
+│                 'trk_weight',                                                │
+│                 'trk_momOverlap*'                                            │
+│             ],                                                               │
+│             'Kinematics': [                                                  │
+│                 'p',                                                         │
+│                 'pt',                                                        │
+│                 'p[xyz]',                                                    │
+│                 'eta',                                                       │
+│                 'phi',                                                       │
+│                 'm',                                                         │
+│                 'q',                                                         │
+│                 '*_vs_pT*',                                                  │
+│                 '*_vs_eta*',                                                 │
+│                 '*_vs_phi*'                                                  │
+│             ],                                                               │
+│             'Simulation': [                                                  │
+│                 'v[xyzt]',                                                   │
+│                 'vertex_*',                                                  │
+│                 'e_loss',                                                    │
+│                 'total_x0',                                                  │
+│                 'total_l0',                                                  │
+│                 'number_of_hits'                                             │
+│             ]                                                                │
+│         }                                                                    │
+│     )                                                                        │
+│ )                                                                            │
+╰──────────────────────────────────────────────────────────────────────────────╯
+──────────────────────────────── e_loss (TH1D) ─────────────────────────────────
+✅ Chi2Test 0.9999997278783577 > 0.01
+✅ KolmogorovTest 1.0 > 0.68
+✅ RatioCheck (a/b - 1) / sigma(a/b) > 3 for 0/20 bins, cf. 4.47213595499958
+✅ ResidualCheck pull < 1 in 19/20 bins, cf. 4.47213595499958
+🔴 IntegralTest Intregal: 98677.0+-314.1289544120376 vs. 
+97069.0+-311.5589831797504: (int_a - int_b) / sqrt(sigma(int_a)^2 + 
+sigma(int_b)^2) = 3.63 >= 3
+────────────────────────────────── eta (TH1D) ──────────────────────────────────
+✅ Chi2Test 0.9999531497854302 > 0.01
+✅ KolmogorovTest 0.7263898636395352 > 0.68
+✅ RatioCheck (a/b - 1) / sigma(a/b) > 3 for 0/100 bins, cf. 10.0
+🔴 ResidualCheck pull > 1 in 17/100 bins, cf. 10.0
+🔴 IntegralTest Intregal: 98492.0+-313.83435121095334 vs. 
+96860.0+-311.22339243700816: (int_a - int_b) / sqrt(sigma(int_a)^2 + 
+sigma(int_b)^2) = 3.69 >= 3
+─────────────────────────────────── m (TH1D) ───────────────────────────────────
+✅ Chi2Test 0.5154073854437311 > 0.01
+✅ KolmogorovTest 1.0 > 0.68
+✅ RatioCheck (a/b - 1) / sigma(a/b) > 3 for 0/4 bins, cf. 2.0
+✅ ResidualCheck pull < 1 in 98/100 bins, cf. 10.0
+🔴 IntegralTest Intregal: 95410.0+-308.8850919031218 vs. 
+93974.0+-306.5517900779573: (int_a - int_b) / sqrt(sigma(int_a)^2 + 
+sigma(int_b)^2) = 3.30 >= 3
+──────────────────────────── number_of_hits (TH1D) ─────────────────────────────
+🟡 Chi2Test
+✅ KolmogorovTest 1.0 > 0.68
+✅ RatioCheck (a/b - 1) / sigma(a/b) > 3 for 0/20 bins, cf. 4.47213595499958
+✅ ResidualCheck pull < 1 in 24/26 bins, cf. 5.0990195135927845
+🔴 IntegralTest Intregal: 98735.0+-314.2212596244882 vs. 
+97125.0+-311.64884084494844: (int_a - int_b) / sqrt(sigma(int_a)^2 + 
+sigma(int_b)^2) = 3.64 >= 3
+──────────────────────────────── outcome (TH1D) ────────────────────────────────
+🔴 Chi2Test ! 4.072447530094245e-27 > 0.01
+🔴 KolmogorovTest ! 0.5930982258429974 > 0.68
+✅ RatioCheck (a/b - 1) / sigma(a/b) > 3 for 0/3 bins, cf. 1.7320508075688772
+✅ ResidualCheck pull < 1 in 98/100 bins, cf. 10.0
+🔴 IntegralTest Intregal: 3508.0+-59.22837157984339 vs. 
+4370.0+-66.10597552415364: (int_a - int_b) / sqrt(sigma(int_a)^2 + 
+sigma(int_b)^2) = 9.71 >= 3
+─────────────────────────────────── p (TH1D) ───────────────────────────────────
+✅ Chi2Test 1.0 > 0.01
+✅ KolmogorovTest 0.9999699998154822 > 0.68
+✅ RatioCheck (a/b - 1) / sigma(a/b) > 3 for 0/99 bins, cf. 9.9498743710662
+✅ ResidualCheck pull < 1 in 98/100 bins, cf. 10.0
+🔴 IntegralTest Intregal: 98619.0+-314.03662206819126 vs. 
+97010.0+-311.46428366668306: (int_a - int_b) / sqrt(sigma(int_a)^2 + 
+sigma(int_b)^2) = 3.64 >= 3
+────────────────────────────────── phi (TH1D) ──────────────────────────────────
+✅ Chi2Test 0.9999999656146312 > 0.01
+✅ KolmogorovTest 0.8585504468186347 > 0.68
+✅ RatioCheck (a/b - 1) / sigma(a/b) > 3 for 0/80 bins, cf. 8.94427190999916
+🔴 ResidualCheck pull > 1 in 16/100 bins, cf. 10.0
+🔴 IntegralTest Intregal: 98739.0+-314.2276245017296 vs. 
+97129.0+-311.6552582582235: (int_a - int_b) / sqrt(sigma(int_a)^2 + 
+sigma(int_b)^2) = 3.64 >= 3
+────────────────────────────────── pt (TH1D) ───────────────────────────────────
+✅ Chi2Test 1.0 > 0.01
+✅ KolmogorovTest 0.9999991928378151 > 0.68
+✅ RatioCheck (a/b - 1) / sigma(a/b) > 3 for 0/50 bins, cf. 7.0710678118654755
+✅ ResidualCheck pull < 1 in 99/100 bins, cf. 10.0
+🔴 IntegralTest Intregal: 98739.0+-314.2276245017296 vs. 
+97129.0+-311.6552582582235: (int_a - int_b) / sqrt(sigma(int_a)^2 + 
+sigma(int_b)^2) = 3.64 >= 3
+────────────────────────────────── px (TH1D) ───────────────────────────────────
+✅ Chi2Test 0.9999999999999987 > 0.01
+🔴 KolmogorovTest ! 0.5262308508414191 > 0.68
+✅ RatioCheck (a/b - 1) / sigma(a/b) > 3 for 0/50 bins, cf. 7.0710678118654755
+✅ ResidualCheck pull < 1 in 97/100 bins, cf. 10.0
+🔴 IntegralTest Intregal: 98739.0+-314.2276245017296 vs. 
+97129.0+-311.6552582582235: (int_a - int_b) / sqrt(sigma(int_a)^2 + 
+sigma(int_b)^2) = 3.64 >= 3
+────────────────────────────────── py (TH1D) ───────────────────────────────────
+✅ Chi2Test 1.0 > 0.01
+✅ KolmogorovTest 1.0 > 0.68
+✅ RatioCheck (a/b - 1) / sigma(a/b) > 3 for 0/50 bins, cf. 7.0710678118654755
+✅ ResidualCheck pull < 1 in 98/100 bins, cf. 10.0
+🔴 IntegralTest Intregal: 98739.0+-314.2276245017296 vs. 
+97129.0+-311.6552582582235: (int_a - int_b) / sqrt(sigma(int_a)^2 + 
+sigma(int_b)^2) = 3.64 >= 3
+────────────────────────────────── pz (TH1D) ───────────────────────────────────
+✅ Chi2Test 1.0 > 0.01
+✅ KolmogorovTest 0.9796533669131413 > 0.68
+✅ RatioCheck (a/b - 1) / sigma(a/b) > 3 for 0/99 bins, cf. 9.9498743710662
+✅ ResidualCheck pull < 1 in 98/100 bins, cf. 10.0
+🔴 IntegralTest Intregal: 98687.0+-314.144871038825 vs. 
+97078.0+-311.5734263379982: (int_a - int_b) / sqrt(sigma(int_a)^2 + 
+sigma(int_b)^2) = 3.64 >= 3
+─────────────────────────────────── q (TH1D) ───────────────────────────────────
+✅ Chi2Test 0.3948176478275991 > 0.01
+✅ KolmogorovTest 0.9314776066940885 > 0.68
+✅ RatioCheck (a/b - 1) / sigma(a/b) > 3 for 0/3 bins, cf. 1.7320508075688772
+✅ ResidualCheck pull < 1 in 97/100 bins, cf. 10.0
+🔴 IntegralTest Intregal: 98047.0+-313.1245758480161 vs. 
+96485.0+-310.6203470476459: (int_a - int_b) / sqrt(sigma(int_a)^2 + 
+sigma(int_b)^2) = 3.54 >= 3
+─────────────────────────────── q_over_p (TH1D) ────────────────────────────────
+✅ Chi2Test 0.9999999815302085 > 0.01
+✅ KolmogorovTest 0.9999995479713284 > 0.68
+✅ RatioCheck (a/b - 1) / sigma(a/b) > 3 for 0/100 bins, cf. 10.0
+🔴 ResidualCheck pull > 1 in 15/100 bins, cf. 10.0
+🔴 IntegralTest Intregal: 96192.0+-310.14835159968203 vs. 
+94742.0+-307.80188433471295: (int_a - int_b) / sqrt(sigma(int_a)^2 + 
+sigma(int_b)^2) = 3.32 >= 3
+───────────────────────────────── theta (TH1D) ─────────────────────────────────
+✅ Chi2Test 0.9996995726519988 > 0.01
+✅ KolmogorovTest 0.7402568281492012 > 0.68
+✅ RatioCheck (a/b - 1) / sigma(a/b) > 3 for 0/100 bins, cf. 10.0
+🔴 ResidualCheck pull > 1 in 22/100 bins, cf. 10.0
+🔴 IntegralTest Intregal: 98738.0+-314.226033294506 vs. 
+97128.0+-311.65365391729324: (int_a - int_b) / sqrt(sigma(int_a)^2 + 
+sigma(int_b)^2) = 3.64 >= 3
+─────────────────────────────── total_l0 (TH1D) ────────────────────────────────
+🟡 Chi2Test
+✅ KolmogorovTest 1.0 > 0.68
+✅ RatioCheck (a/b - 1) / sigma(a/b) > 3 for 0/1 bins, cf. 1.0
+✅ ResidualCheck pull < 1 in 19/20 bins, cf. 4.47213595499958
+🔴 IntegralTest Intregal: 98739.0+-314.2276245017296 vs. 
+97129.0+-311.6552582582235: (int_a - int_b) / sqrt(sigma(int_a)^2 + 
+sigma(int_b)^2) = 3.64 >= 3
+─────────────────────────────── total_x0 (TH1D) ────────────────────────────────
+🟡 Chi2Test
+✅ KolmogorovTest 1.0 > 0.68
+✅ RatioCheck (a/b - 1) / sigma(a/b) > 3 for 0/1 bins, cf. 1.0
+✅ ResidualCheck pull < 1 in 19/20 bins, cf. 4.47213595499958
+🔴 IntegralTest Intregal: 98739.0+-314.2276245017296 vs. 
+97129.0+-311.6552582582235: (int_a - int_b) / sqrt(sigma(int_a)^2 + 
+sigma(int_b)^2) = 3.64 >= 3
+────────────────────────────────── vt (TH1D) ───────────────────────────────────
+🟡 Chi2Test
+✅ KolmogorovTest 0.9999997910783011 > 0.68
+✅ RatioCheck (a/b - 1) / sigma(a/b) > 3 for 0/80 bins, cf. 8.94427190999916
+🔴 ResidualCheck pull > 1 in 13/100 bins, cf. 10.0
+✅ IntegralTest Intregal: 6445.0+-80.2807573457052 vs. 
+6432.0+-80.19975062305369: (int_a - int_b) / sqrt(sigma(int_a)^2 + 
+sigma(int_b)^2) = 0.11 < 3
+────────────────────────────────── vx (TH1D) ───────────────────────────────────
+🟡 Chi2Test
+✅ KolmogorovTest 1.0 > 0.68
+✅ RatioCheck (a/b - 1) / sigma(a/b) > 3 for 0/43 bins, cf. 6.557438524302
+🔴 ResidualCheck pull > 1 in 11/100 bins, cf. 10.0
+✅ IntegralTest Intregal: 51059.0+-225.9623862504554 vs. 
+50518.0+-224.76209644866725: (int_a - int_b) / sqrt(sigma(int_a)^2 + 
+sigma(int_b)^2) = 1.70 < 3
+────────────────────────────────── vy (TH1D) ───────────────────────────────────
+🟡 Chi2Test
+✅ KolmogorovTest 1.0 > 0.68
+✅ RatioCheck (a/b - 1) / sigma(a/b) > 3 for 0/48 bins, cf. 6.928203230275509
+🔴 ResidualCheck pull > 1 in 10/100 bins, cf. 10.0
+✅ IntegralTest Intregal: 51505.0+-226.947130407062 vs. 
+50801.0+-225.39077177204928: (int_a - int_b) / sqrt(sigma(int_a)^2 + 
+sigma(int_b)^2) = 2.20 < 3
+────────────────────────────────── vz (TH1D) ───────────────────────────────────
+✅ Chi2Test 0.6131019033495975 > 0.01
+🔴 KolmogorovTest ! 0.15207569789484301 > 0.68
+✅ RatioCheck (a/b - 1) / sigma(a/b) > 3 for 0/100 bins, cf. 10.0
+🔴 ResidualCheck pull > 1 in 22/100 bins, cf. 10.0
+🔴 IntegralTest Intregal: 65194.0+-255.3311575190149 vs. 
+63948.0+-252.87941790505607: (int_a - int_b) / sqrt(sigma(int_a)^2 + 
+sigma(int_b)^2) = 3.47 >= 3
+Comparing... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:00
+╭──────────────────────────────────────────────────────────────────────────────╮
+│                                  🔴 FAILURE                                  │
+│                20 items failed checks out of 20 common items                 │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Making plots ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:01

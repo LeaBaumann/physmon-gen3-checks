@@ -1,0 +1,34 @@
+diff --git a/CI/physmon/physmon_common.py b/CI/physmon/physmon_common.py
+index 6f47c71b2..db5725d41 100644
+--- a/CI/physmon/physmon_common.py
++++ b/CI/physmon/physmon_common.py
+@@ -13,8 +13,8 @@ from acts.examples.odd import getOpenDataDetector
+ # than committed: the compressed map is tens of MB, far over this repo's
+ # check-added-large-files limit.
+ PROVISIONAL_GEN3_MATERIAL_MAP_URL = (
+-    "https://github.com/LeaBaumann/acts/releases/download/"
+-    "gen3-material-map-provisional-v1/odd_gen3_map.json.zst"
++    "file:///home/lea-baumann/Documents/PhD/ACTS/root/"
++    "Gen3_official_repo_map_nocalo/odd_gen3_map_nocalo.json.zst"
+ )
+ 
+ PhysmonSetup = collections.namedtuple(
+diff --git a/CI/physmon/workflows/physmon_simulation.py b/CI/physmon/workflows/physmon_simulation.py
+index 1c2600eda..94eacdbc1 100755
+--- a/CI/physmon/workflows/physmon_simulation.py
++++ b/CI/physmon/workflows/physmon_simulation.py
+@@ -99,7 +99,13 @@ with tempfile.TemporaryDirectory() as temp:
+         setup.trackingGeometry,
+         setup.field,
+         rnd,
+-        killVolume=setup.trackingGeometry.highestTrackingVolume,
++        # LOCAL TEST ONLY, do not commit: kill volume with the Gen1 extent
++        # (Gen1 highestTrackingVolume: r <= 1202 mm, |z| <= 4002 mm)
++        killVolume=acts.TrackingVolume(
++            acts.Transform3.Identity(),
++            acts.CylinderVolumeBounds(0.0, 1202.0, 4002.0),
++            "Gen1KillVolume",
++        ),
+         killAfterTime=25 * u.ns,
+         killSecondaries=True,
+         inputParticles="particles_generated",
