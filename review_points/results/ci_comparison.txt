@@ -1,0 +1,35 @@
+1) reswidth_* histograms: value per eta bin (0 = per-bin Gaussian fit failed)
+  trackfitting_kf reswidth_qopt_vs_eta: bins with a value: Gen1 17, Gen3 16, both 13, exactly one 7; ratio Gen3/Gen1 where both: 0.945-1.074
+  trackfitting_gx2f reswidth_qopt_vs_eta: bins with a value: Gen1 17, Gen3 17, both 14, exactly one 6; ratio Gen3/Gen1 where both: 0.937-1.051
+  trackfitting_kf reswidth_theta_vs_eta: bins with a value: Gen1 15, Gen3 15, both 14, exactly one 2; ratio Gen3/Gen1 where both: 0.976-1.030
+
+2a) GSF: mean per track by |eta| (0-0.5, ..., 2.5-3)
+  nOutliers_vs_eta       Gen1 (CI reference)    0.006 0.005 0.220 0.303 0.422 0.166   all 0.181
+  nOutliers_vs_eta       Gen3 (CI, dd259a4dc)   0.006 0.008 0.014 0.021 0.006 0.014   all 0.012
+  nMeasurements_vs_eta   Gen1 (CI reference)    14.192 13.960 12.776 13.696 11.878 11.977   all 13.109
+  nMeasurements_vs_eta   Gen3 (CI, dd259a4dc)   14.189 13.952 12.991 13.983 12.294 12.131   all 13.277
+
+3) ttbar CKF track summary: entries, mean, std
+  err_eTHETA_fit   Gen1 (CI reference)    N   10460  mean 0.001044  std 0.0005611
+  err_eTHETA_fit   Gen3 (CI, dd259a4dc)   N   10484  mean 0.001128  std 0.0006099
+  err_eLOC0_fit    Gen1 (CI reference)    N    9939  mean 0.08912  std 0.04152
+  err_eLOC0_fit    Gen3 (CI, dd259a4dc)   N    9687  mean 0.09311  std 0.04258
+  err_ePHI_fit     Gen1 (CI reference)    N    8070  mean 0.002221  std 0.0008587
+  err_ePHI_fit     Gen3 (CI, dd259a4dc)   N    7670  mean 0.002293  std 0.0008732
+  pull_eTHETA_fit  Gen1 (CI reference)    N   10154  mean 0.002931  std 1.094
+  pull_eTHETA_fit  Gen3 (CI, dd259a4dc)   N   10207  mean -0.003539  std 1.084
+  pull_eLOC0_fit   Gen1 (CI reference)    N   10091  mean -0.01052  std 1.197
+  pull_eLOC0_fit   Gen3 (CI, dd259a4dc)   N   10157  mean -0.004241  std 1.187
+  pull_ePHI_fit    Gen1 (CI reference)    N   10098  mean 0.002923  std 1.203
+  pull_ePHI_fit    Gen3 (CI, dd259a4dc)   N   10162  mean -0.0007794  std 1.199
+
+4) ttbar purity / outliers vs |eta|: value (entries)
+  performance_finding_ckf_ml_solver purity_vs_eta
+    Gen1 (CI reference)    0.1:0.999(231) 0.3:0.998(276) 0.5:0.997(247) 0.7:1.000(270) 0.9:0.996(230) 1.1:0.995(245) 1.3:0.996(269) 1.5:0.996(259) 1.7:0.998(233) 1.9:0.995(256) 2.1:0.997(227) 2.3:0.999(224) 2.5:0.997(227) 2.7:0.997(237) 2.9:0.995(214) 3.1:0.995(23) 3.3:0.986(6)
+    Gen3 (CI, dd259a4dc)   0.1:0.998(226) 0.3:0.997(271) 0.5:0.997(249) 0.7:0.997(261) 0.9:0.996(234) 1.1:0.998(245) 1.3:0.993(273) 1.5:0.998(257) 1.7:0.996(234) 1.9:0.998(261) 2.1:0.999(223) 2.3:0.998(227) 2.5:0.999(229) 2.7:0.996(237) 2.9:0.998(214) 3.1:0.972(18) 3.3:0.968(7)
+  performance_finding_ckf_ml_solver nOutliers_vs_eta
+    Gen1 (CI reference)    0.1:0.008(237) 0.3:0.014(279) 0.5:0.004(245) 0.7:0.000(271) 0.9:0.039(230) 1.1:0.016(245) 1.3:0.014(277) 1.5:0.027(261) 1.7:0.017(238) 1.9:0.028(254) 2.1:0.027(226) 2.3:0.004(226) 2.5:0.013(229) 2.7:0.013(239) 2.9:0.041(220) 3.1:0.037(27) 3.3:0.143(7)
+    Gen3 (CI, dd259a4dc)   0.1:0.013(234) 0.3:0.015(275) 0.5:0.020(248) 0.7:0.015(262) 0.9:0.035(228) 1.1:0.008(251) 1.3:0.040(275) 1.5:0.000(258) 1.7:0.025(238) 1.9:0.008(259) 2.1:0.000(224) 2.3:0.022(232) 2.5:0.009(234) 2.7:0.029(240) 2.9:0.014(215) 3.1:0.350(20) 3.3:0.143(7)
+  performance_finding_ckf purity_vs_eta
+    Gen1 (CI reference)    0.1:0.987(280) 0.3:0.984(339) 0.5:0.982(319) 0.7:0.989(316) 0.9:0.973(300) 1.1:0.970(366) 1.3:0.876(638) 1.5:0.969(381) 1.7:0.976(327) 1.9:0.961(395) 2.1:0.968(296) 2.3:0.987(282) 2.5:0.977(352) 2.7:0.976(409) 2.9:0.967(357) 3.1:0.958(55) 3.3:0.988(7)
+    Gen3 (CI, dd259a4dc)   0.1:0.986(269) 0.3:0.981(341) 0.5:0.978(320) 0.7:0.982(331) 0.9:0.980(288) 1.1:0.966(380) 1.3:0.953(457) 1.5:0.973(387) 1.7:0.968(363) 1.9:0.966(386) 2.1:0.970(304) 2.3:0.983(310) 2.5:0.982(328) 2.7:0.981(361) 2.9:0.962(384) 3.1:0.939(32) 3.3:0.939(11)

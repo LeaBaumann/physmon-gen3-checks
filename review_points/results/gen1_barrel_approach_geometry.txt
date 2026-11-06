@@ -1,0 +1,40 @@
+vol17 lay2 approach1: r =    30.9 mm, halfLengthZ =   512.2 mm
+vol17 lay2 approach2: r =    39.4 mm, halfLengthZ =   512.2 mm
+vol17 lay2 layer    : r =    35.1 mm, halfLengthZ =   512.2 mm
+vol17 lay2 modules: n=224, outer module edge |z|max = 507.2 mm
+vol17 lay4 approach1: r =    66.6 mm, halfLengthZ =   512.2 mm
+vol17 lay4 approach2: r =    74.8 mm, halfLengthZ =   512.2 mm
+vol17 lay4 layer    : r =    70.7 mm, halfLengthZ =   512.2 mm
+vol17 lay4 modules: n=448, outer module edge |z|max = 507.2 mm
+vol17 lay6 approach1: r =   112.4 mm, halfLengthZ =   512.2 mm
+vol17 lay6 approach2: r =   120.6 mm, halfLengthZ =   512.2 mm
+vol17 lay6 layer    : r =   116.5 mm, halfLengthZ =   512.2 mm
+vol17 lay6 modules: n=728, outer module edge |z|max = 507.2 mm
+vol17 lay8 approach1: r =   168.3 mm, halfLengthZ =   512.2 mm
+vol17 lay8 approach2: r =   176.5 mm, halfLengthZ =   512.2 mm
+vol17 lay8 layer    : r =   172.4 mm, halfLengthZ =   512.2 mm
+vol17 lay8 modules: n=1092, outer module edge |z|max = 507.2 mm
+vol24 lay2 approach1: r =   247.4 mm, halfLengthZ =  1149.0 mm
+vol24 lay2 approach2: r =   289.7 mm, halfLengthZ =  1149.0 mm
+vol24 lay2 layer    : r =   268.6 mm, halfLengthZ =  1149.0 mm
+vol24 lay2 modules: n=840, outer module edge |z|max = 1139.0 mm
+vol24 lay4 approach1: r =   347.1 mm, halfLengthZ =  1149.0 mm
+vol24 lay4 approach2: r =   389.5 mm, halfLengthZ =  1149.0 mm
+vol24 lay4 layer    : r =   368.3 mm, halfLengthZ =  1149.0 mm
+vol24 lay4 modules: n=1176, outer module edge |z|max = 1139.0 mm
+vol24 lay6 approach1: r =   486.9 mm, halfLengthZ =  1149.0 mm
+vol24 lay6 approach2: r =   529.2 mm, halfLengthZ =  1149.0 mm
+vol24 lay6 layer    : r =   508.1 mm, halfLengthZ =  1149.0 mm
+vol24 lay6 modules: n=1638, outer module edge |z|max = 1139.0 mm
+vol24 lay8 approach1: r =   646.7 mm, halfLengthZ =  1149.0 mm
+vol24 lay8 approach2: r =   689.1 mm, halfLengthZ =  1149.0 mm
+vol24 lay8 layer    : r =   667.9 mm, halfLengthZ =  1149.0 mm
+vol24 lay8 modules: n=2142, outer module edge |z|max = 1139.0 mm
+vol29 lay2 approach1: r =   800.6 mm, halfLengthZ =  1150.9 mm
+vol29 lay2 approach2: r =   856.9 mm, halfLengthZ =  1150.9 mm
+vol29 lay2 layer    : r =   828.7 mm, halfLengthZ =  1150.9 mm
+vol29 lay2 modules: n=2520, outer module edge |z|max = 1140.9 mm
+vol29 lay4 approach1: r =  1000.3 mm, halfLengthZ =  1150.9 mm
+vol29 lay4 approach2: r =  1056.6 mm, halfLengthZ =  1150.9 mm
+vol29 lay4 layer    : r =  1028.5 mm, halfLengthZ =  1150.9 mm
+vol29 lay4 modules: n=3360, outer module edge |z|max = 1140.9 mm

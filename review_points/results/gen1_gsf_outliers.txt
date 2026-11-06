@@ -1,0 +1,17 @@
+barrel measurement/outlier states: 82130, outliers: 1774
+outliers per layer:
+   ShortStrip barrel layer 2: 368
+   Pixel barrel layer 4: 346
+   ShortStrip barrel layer 4: 269
+   Pixel barrel layer 6: 200
+   ShortStrip barrel layer 6: 171
+   LongStrip barrel layer 2: 162
+   ShortStrip barrel layer 8: 110
+   Pixel barrel layer 8: 102
+   Pixel barrel layer 2: 46
+   LongStrip barrel layer 4: 0
+outliers in the last 10 % of the layer length (|z| > 0.9 |z|max): 93.7 %
+outliers that are the last hit of the track in this barrel:        78.5 %
+outliers whose next measurement further out is in an endcap:       73.6 %
+track crosses the outer approach cylinder outside its z-range: outliers 93.5 %, regular measurements 0.2 %
+of all states with the crossing outside the range, flagged as outlier: 91.9 %

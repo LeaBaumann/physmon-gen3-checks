@@ -1,0 +1,13 @@
+diff --git a/Examples/Framework/include/ActsExamples/Validation/TrackSummaryPlotTool.hpp b/Examples/Framework/include/ActsExamples/Validation/TrackSummaryPlotTool.hpp
+index f089b398a..1a70929a5 100644
+--- a/Examples/Framework/include/ActsExamples/Validation/TrackSummaryPlotTool.hpp
++++ b/Examples/Framework/include/ActsExamples/Validation/TrackSummaryPlotTool.hpp
+@@ -32,7 +32,7 @@ class TrackSummaryPlotTool {
+         {"Eta", BoostRegularAxis(40, -4, 4, "reco #eta")},
+         {"Phi", BoostRegularAxis(100, -3.15, 3.15, "reco #phi")},
+         {"Pt", BoostRegularAxis(40, 0, 100, "reco p_{T} [GeV/c]")},
+-        {"Num", BoostRegularAxis(30, -0.5, 29.5, "N")}};
++        {"Num", BoostRegularAxis(60, -0.5, 59.5, "N")}};  // LOCAL TEST ONLY
+     /// Optional prefix for histogram names
+     std::string prefix;
+   };

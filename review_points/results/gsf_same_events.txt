@@ -1,0 +1,2 @@
+events with exactly one track in both: 9851; identical truth momentum: 100.0 %; identical measurements+outliers: 99.7 %
+events with Gen1 outliers: 1281: Gen1 outliers 1772, Gen3 outliers 30, extra Gen3 measurements 1752
