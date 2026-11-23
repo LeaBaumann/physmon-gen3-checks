@@ -1,0 +1,31 @@
+===== ele_truth_smeared
+gen1        eta 2.8-3.0: tracks  6065 purity 0.9805 | matched  5308 (0.9887) duplicates   757 (0.9235) | without explosions: tracks  6043 purity 0.9816, duplicates   736
+gen1        eta 3.0-3.2: tracks  6644 purity 0.9639 | matched  5373 (0.9863) duplicates  1271 (0.8689) | without explosions: tracks  6420 purity 0.9702, duplicates  1053
+gen1        eta 3.2-3.5: tracks  9227 purity 0.9756 | matched  7780 (0.9972) duplicates  1447 (0.8598) | without explosions: tracks  8875 purity 0.9840, duplicates  1105
+            largest numbers of tracks per particle: [56, 55, 55, 47, 42]
+gen3        eta 2.8-3.0: tracks  6072 purity 0.9772 | matched  5266 (0.9896) duplicates   806 (0.8962) | without explosions: tracks  5966 purity 0.9812, duplicates   703
+gen3        eta 3.0-3.2: tracks  6788 purity 0.9576 | matched  5397 (0.9879) duplicates  1391 (0.8402) | without explosions: tracks  6420 purity 0.9693, duplicates  1030
+gen3        eta 3.2-3.5: tracks 12972 purity 0.8908 | matched  7724 (0.9960) duplicates  5248 (0.7360) | without explosions: tracks  9218 purity 0.9755, duplicates  1506
+            largest numbers of tracks per particle: [2032, 1276, 125, 71, 62]
+gen3nocalo  eta 2.8-3.0: tracks  6028 purity 0.9806 | matched  5306 (0.9892) duplicates   722 (0.9177) | without explosions: tracks  6000 purity 0.9816, duplicates   695
+gen3nocalo  eta 3.0-3.2: tracks  6956 purity 0.9470 | matched  5367 (0.9888) duplicates  1589 (0.8059) | without explosions: tracks  6360 purity 0.9724, duplicates   998
+gen3nocalo  eta 3.2-3.5: tracks 10695 purity 0.9373 | matched  7692 (0.9962) duplicates  3003 (0.7864) | without explosions: tracks  9188 purity 0.9743, duplicates  1510
+            largest numbers of tracks per particle: [299, 278, 253, 188, 183]
+===== ele_seed43
+gen1        eta 2.8-3.0: tracks  6148 purity 0.9746 | matched  5273 (0.9886) duplicates   875 (0.8903) | without explosions: tracks  6029 purity 0.9810, duplicates   758
+gen1        eta 3.0-3.2: tracks  6872 purity 0.9580 | matched  5373 (0.9868) duplicates  1499 (0.8549) | without explosions: tracks  6452 purity 0.9719, duplicates  1091
+gen1        eta 3.2-3.5: tracks 10111 purity 0.9470 | matched  7720 (0.9976) duplicates  2391 (0.7834) | without explosions: tracks  8704 purity 0.9853, duplicates  1000
+            largest numbers of tracks per particle: [733, 163, 100, 86, 79]
+gen3        eta 2.8-3.0: tracks  6375 purity 0.9720 | matched  5346 (0.9900) duplicates  1029 (0.8786) | without explosions: tracks  6151 purity 0.9802, duplicates   807
+gen3        eta 3.0-3.2: tracks  6654 purity 0.9617 | matched  5366 (0.9877) duplicates  1288 (0.8533) | without explosions: tracks  6450 purity 0.9704, duplicates  1089
+gen3        eta 3.2-3.5: tracks 11276 purity 0.9212 | matched  7730 (0.9967) duplicates  3546 (0.7567) | without explosions: tracks  9135 purity 0.9766, duplicates  1423
+            largest numbers of tracks per particle: [680, 303, 248, 150, 145]
+===== ele_seed44
+gen1        eta 2.8-3.0: tracks  5789 purity 0.9833 | matched  5182 (0.9899) duplicates   607 (0.9273) | without explosions: tracks  5789 purity 0.9833, duplicates   607
+gen1        eta 3.0-3.2: tracks  6651 purity 0.9596 | matched  5300 (0.9865) duplicates  1351 (0.8542) | without explosions: tracks  6363 purity 0.9729, duplicates  1066
+gen1        eta 3.2-3.5: tracks 10409 purity 0.9447 | matched  7956 (0.9972) duplicates  2453 (0.7745) | without explosions: tracks  9052 purity 0.9825, duplicates  1107
+            largest numbers of tracks per particle: [926, 203, 100, 71, 66]
+gen3        eta 2.8-3.0: tracks  5889 purity 0.9823 | matched  5203 (0.9905) duplicates   686 (0.9203) | without explosions: tracks  5835 purity 0.9839, duplicates   634
+gen3        eta 3.0-3.2: tracks  6800 purity 0.9539 | matched  5292 (0.9895) duplicates  1508 (0.8289) | without explosions: tracks  6313 purity 0.9742, duplicates  1025
+gen3        eta 3.2-3.5: tracks 11041 purity 0.9322 | matched  7900 (0.9961) duplicates  3141 (0.7714) | without explosions: tracks  9253 purity 0.9775, duplicates  1376
+            largest numbers of tracks per particle: [368, 277, 273, 139, 136]

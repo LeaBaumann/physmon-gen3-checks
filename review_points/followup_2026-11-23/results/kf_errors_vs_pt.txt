@@ -1,0 +1,5 @@
+KF tracks 1000, median pT 51.4 GeV, fraction pT < 10 GeV 0.093
+pT   1-  4 GeV: err_d0 1.052  err_theta 1.081  N=24
+pT   4- 10 GeV: err_d0 1.012  err_theta 1.047  N=69
+pT  10- 30 GeV: err_d0 1.003  err_theta 1.020  N=195
+pT  30-100 GeV: err_d0 1.001  err_theta 1.005  N=712

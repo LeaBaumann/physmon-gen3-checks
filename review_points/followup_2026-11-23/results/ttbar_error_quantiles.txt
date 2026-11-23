@@ -1,0 +1,10 @@
+err_eLOC0_fit   q25 0.0595->0.0628 (1.056)  q50 0.0827->0.0892 (1.079)  q75 0.122->0.135 (1.101)
+                tracks per axis quarter Gen1/Gen3: 1659/1436 5063/4704 2094/2271 1123/1276, overflow 536/808
+err_eLOC1_fit   q25 0.0802->0.0864 (1.077)  q50 0.175->0.195 (1.117)  q75 nan->nan (nan)
+                tracks per axis quarter Gen1/Gen3: 942/825 2490/2329 1243/1384 940/784, overflow 4860/5173
+err_ePHI_fit    q25 0.00178->0.00188 (1.060)  q50 0.00256->0.00277 (1.081)  q75 0.00382->nan (nan)
+                tracks per axis quarter Gen1/Gen3: 663/578 2714/2375 3006/2908 1687/1809, overflow 2405/2825
+err_eTHETA_fit  q25 0.000603->0.000657 (1.089)  q50 0.000948->0.00102 (1.079)  q75 0.00142->0.0015 (1.058)
+                tracks per axis quarter Gen1/Gen3: 5579/5092 4232/4387 614/930 35/75, overflow 15/11
+err_eQOP_fit    q25 0.00256->0.00254 (0.993)  q50 0.00392->0.00386 (0.985)  q75 0.00645->0.00619 (0.960)
+                tracks per axis quarter Gen1/Gen3: 10471/10489 4/6 0/0 0/0, overflow 0/0

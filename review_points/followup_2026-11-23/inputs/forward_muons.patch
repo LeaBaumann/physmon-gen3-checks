@@ -1,0 +1,42 @@
+--- a/CI/physmon/workflows/physmon_trackfinding_1muon.py
++++ b/CI/physmon/workflows/physmon_trackfinding_1muon.py
+@@ -39,7 +39,7 @@
+ def run_ckf_tracking(label, seeding):
+     with tempfile.TemporaryDirectory() as temp:
+         s = acts.examples.Sequencer(
+-            events=10000,
++            events=20000,
+             numThreads=-1,
+             logLevel=acts.logging.INFO,
+         )
+@@ -54,7 +54,7 @@
+         addParticleGun(
+             s,
+             MomentumConfig(1.0 * u.GeV, 10.0 * u.GeV, transverse=True),
+-            EtaConfig(-3.0, 3.0, uniform=True),
++            EtaConfig(2.8, 3.5, uniform=True),
+             PhiConfig(0.0, 360.0 * u.degree),
+             ParticleConfig(1, acts.PdgParticle.eMuon, randomizeCharge=True),
+             vtxGen=acts.examples.GaussianVertexGenerator(
+@@ -87,7 +87,7 @@
+             s,
+             ParticleSelectorConfig(
+                 pt=(0.9 * u.GeV, None),
+-                measurements=(9, None),
++                measurements=(6, None),
+                 removeNeutral=True,
+             ),
+         )
+@@ -198,9 +198,9 @@
+ 
+ for label, seeding in [
+     ("truth_smeared", SeedingAlgorithm.TruthSmeared),
+-    ("truth_estimated", SeedingAlgorithm.TruthEstimated),
++
+     ("seeded", SeedingAlgorithm.GridTriplet),
+-    ("orthogonal", SeedingAlgorithm.OrthogonalTriplet),
+-    ("gbts", SeedingAlgorithm.Gbts),
++
++
+ ]:
+     run_ckf_tracking(label, seeding)

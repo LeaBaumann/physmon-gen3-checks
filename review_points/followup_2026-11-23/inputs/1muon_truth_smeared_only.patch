@@ -1,0 +1,16 @@
+--- a/CI/physmon/workflows/physmon_trackfinding_1muon.py
++++ b/CI/physmon/workflows/physmon_trackfinding_1muon.py
+@@ -198,9 +198,9 @@
+ 
+ for label, seeding in [
+     ("truth_smeared", SeedingAlgorithm.TruthSmeared),
+-    ("truth_estimated", SeedingAlgorithm.TruthEstimated),
+-    ("seeded", SeedingAlgorithm.GridTriplet),
+-    ("orthogonal", SeedingAlgorithm.OrthogonalTriplet),
+-    ("gbts", SeedingAlgorithm.Gbts),
++
++
++
++
+ ]:
+     run_ckf_tracking(label, seeding)

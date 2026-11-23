@@ -1,0 +1,37 @@
+--- a/CI/physmon/physmon_common.py
++++ b/CI/physmon/physmon_common.py
+@@ -35,20 +35,15 @@
+ 
+ 
+ def makeSetup() -> PhysmonSetup:
+-    srcdir = Path(__file__).resolve().parent.parent.parent
++    srcdir = Path('<acts source dir>')
+ 
+     parser = argparse.ArgumentParser()
+     parser.add_argument("outdir")
+ 
+     args = parser.parse_args()
+ 
+-    matMapPath = (
+-        Path(tempfile.gettempdir()) / "odd-material-maps-gen3-provisional.json.zst"
+-    )
+-    urllib.request.urlretrieve(PROVISIONAL_GEN3_MATERIAL_MAP_URL, matMapPath)
+-    matDeco = acts.IMaterialDecorator.fromFile(matMapPath, level=acts.logging.INFO)
+-
+-    detector = getOpenDataDetector(matDeco)
++    # Gen1 comparison run: default (Gen1) ODD material map
++    detector = getOpenDataDetector(gen3=False)
+     trackingGeometry = detector.trackingGeometry()
+     decorators = detector.contextDecorators()
+     field = detector.field
+@@ -58,8 +53,8 @@
+         detector=detector,
+         trackingGeometry=trackingGeometry,
+         decorators=decorators,
+-        digiConfig=srcdir / "Examples/Configs/odd-digi-smearing-config.json",
+-        geoSel=srcdir / "Examples/Configs/odd-seeding-config.json",
++        digiConfig=Path('<workdir>/odd-digi-smearing-config-gen1.json'),
++        geoSel=Path('<workdir>/odd-seeding-config-gen1.json'),
+         gbtsLayerMap=srcdir / "Examples/Configs/odd-gbts-layer-map.json",
+         gbtsConnectionTable=srcdir / "Examples/Configs/odd-gbts-connection-table.json",
+         field=field,

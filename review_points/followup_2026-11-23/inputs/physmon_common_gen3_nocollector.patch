@@ -1,0 +1,31 @@
+--- a/CI/physmon/physmon_common.py
++++ b/CI/physmon/physmon_common.py
+@@ -13,8 +13,8 @@
+ # than committed: the compressed map is tens of MB, far over this repo's
+ # check-added-large-files limit.
+ PROVISIONAL_GEN3_MATERIAL_MAP_URL = (
+-    "https://github.com/LeaBaumann/acts/releases/download/"
+-    "gen3-material-map-provisional-v1/odd_gen3_map.json.zst"
++    "file:///home/lea-baumann/Documents/PhD/ACTS/root/"
++    "Gen3_official_repo_map_nocalo/odd_gen3_map_nocalo.json.zst"
+ )
+ 
+ PhysmonSetup = collections.namedtuple(
+@@ -35,7 +35,7 @@
+ 
+ 
+ def makeSetup() -> PhysmonSetup:
+-    srcdir = Path(__file__).resolve().parent.parent.parent
++    srcdir = Path('<acts source dir>')
+ 
+     parser = argparse.ArgumentParser()
+     parser.add_argument("outdir")
+@@ -43,7 +43,7 @@
+     args = parser.parse_args()
+ 
+     matMapPath = (
+-        Path(tempfile.gettempdir()) / "odd-material-maps-gen3-provisional.json.zst"
++        Path(tempfile.gettempdir()) / "odd-material-maps-gen3-nocalo.json.zst"
+     )
+     urllib.request.urlretrieve(PROVISIONAL_GEN3_MATERIAL_MAP_URL, matMapPath)
+     matDeco = acts.IMaterialDecorator.fromFile(matMapPath, level=acts.logging.INFO)

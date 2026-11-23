@@ -1,0 +1,27 @@
+matched single-track events: 9996
+identical truth eta: 1.0
+nMeasurements equal: 0.957  Gen3 more: 0.021  Gen3 fewer: 0.022
+example eta -0.15: Gen1 volumes [29, 29, 29, 29, 24, 24, 24, 24, 24, 24, 24, 17, 17, 17, 17, 17]
+                Gen3 volumes [95, 95, 94, 94, 64, 64, 63, 63, 62, 61, 61, 20, 19, 18, 18, 17]
+example eta +0.29: Gen1 volumes [29, 29, 29, 29, 29, 24, 24, 24, 24, 17, 17, 17, 17, 17]
+                Gen3 volumes [95, 95, 95, 94, 94, 64, 63, 62, 61, 20, 20, 19, 18, 17]
+
+median ratio Gen3/Gen1 (all / same nMeasurements):
+  err_eLOC0_fit   1.017 / 1.017
+  err_eLOC1_fit   1.037 / 1.036
+  err_ePHI_fit    1.036 / 1.035
+  err_eTHETA_fit  1.051 / 1.050
+  err_eQOP_fit    0.997 / 0.997
+  chi2Sum         1.000 / 1.000
+
+median ratio Gen3/Gen1, same nMeasurements       eLOC0   eLOC1    ePHI  eTHETA       N
+  |eta|     0.0- 0.5                      1.010   1.009   1.027   1.027    1688
+  |eta|     0.5- 1.0                      1.011   1.014   1.028   1.033    1573
+  |eta|     1.0- 1.5                      1.015   1.026   1.032   1.044    1598
+  |eta|     1.5- 2.0                      1.021   1.051   1.039   1.064    1540
+  |eta|     2.0- 2.5                      1.029   1.074   1.046   1.077    1613
+  |eta|     2.5- 3.0                      1.038   1.072   1.053   1.071    1556
+  pT [GeV]  0.9- 2.0                      1.055   1.070   1.064   1.072    1033
+  pT [GeV]  2.0- 4.0                      1.028   1.050   1.046   1.060    2103
+  pT [GeV]  4.0- 7.0                      1.014   1.032   1.032   1.048    3201
+  pT [GeV]  7.0-11.0                      1.008   1.018   1.024   1.037    3231
