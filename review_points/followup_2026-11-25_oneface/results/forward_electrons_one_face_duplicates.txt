@@ -1,0 +1,27 @@
+===== ele_truth_smeared
+both        eta 2.8-3.0: tracks  6072 purity 0.9772 | matched  5266 (0.9896) duplicates   806 (0.8962) | without explosions: tracks  5966 purity 0.9812, duplicates   703
+both        eta 3.0-3.2: tracks  6788 purity 0.9576 | matched  5397 (0.9879) duplicates  1391 (0.8402) | without explosions: tracks  6420 purity 0.9693, duplicates  1030
+both        eta 3.2-3.5: tracks 12972 purity 0.8908 | matched  7724 (0.9960) duplicates  5248 (0.7360) | without explosions: tracks  9218 purity 0.9755, duplicates  1506
+            largest numbers of tracks per particle: [2032, 1276, 125, 71, 62]
+oneface     eta 2.8-3.0: tracks  5913 purity 0.9841 | matched  5282 (0.9899) duplicates   631 (0.9349) | without explosions: tracks  5913 purity 0.9841, duplicates   631
+oneface     eta 3.0-3.2: tracks  6706 purity 0.9625 | matched  5379 (0.9888) duplicates  1327 (0.8560) | without explosions: tracks  6384 purity 0.9723, duplicates  1010
+oneface     eta 3.2-3.5: tracks  9273 purity 0.9723 | matched  7681 (0.9966) duplicates  1592 (0.8549) | without explosions: tracks  9003 purity 0.9790, duplicates  1329
+            largest numbers of tracks per particle: [118, 68, 64, 62, 62]
+===== ele_seed43
+both        eta 2.8-3.0: tracks  6375 purity 0.9720 | matched  5346 (0.9900) duplicates  1029 (0.8786) | without explosions: tracks  6151 purity 0.9802, duplicates   807
+both        eta 3.0-3.2: tracks  6654 purity 0.9617 | matched  5366 (0.9877) duplicates  1288 (0.8533) | without explosions: tracks  6450 purity 0.9704, duplicates  1089
+both        eta 3.2-3.5: tracks 11276 purity 0.9212 | matched  7730 (0.9967) duplicates  3546 (0.7567) | without explosions: tracks  9135 purity 0.9766, duplicates  1423
+            largest numbers of tracks per particle: [680, 303, 248, 150, 145]
+oneface     eta 2.8-3.0: tracks  5948 purity 0.9847 | matched  5261 (0.9908) duplicates   687 (0.9382) | without explosions: tracks  5948 purity 0.9847, duplicates   687
+oneface     eta 3.0-3.2: tracks  6901 purity 0.9561 | matched  5377 (0.9888) duplicates  1524 (0.8406) | without explosions: tracks  6366 purity 0.9743, duplicates   998
+oneface     eta 3.2-3.5: tracks  9407 purity 0.9704 | matched  7772 (0.9965) duplicates  1635 (0.8463) | without explosions: tracks  9239 purity 0.9742, duplicates  1474
+            largest numbers of tracks per particle: [146, 135, 70, 40, 36]
+===== ele_seed44
+both        eta 2.8-3.0: tracks  5889 purity 0.9823 | matched  5203 (0.9905) duplicates   686 (0.9203) | without explosions: tracks  5835 purity 0.9839, duplicates   634
+both        eta 3.0-3.2: tracks  6800 purity 0.9539 | matched  5292 (0.9895) duplicates  1508 (0.8289) | without explosions: tracks  6313 purity 0.9742, duplicates  1025
+both        eta 3.2-3.5: tracks 11041 purity 0.9322 | matched  7900 (0.9961) duplicates  3141 (0.7714) | without explosions: tracks  9253 purity 0.9775, duplicates  1376
+            largest numbers of tracks per particle: [368, 277, 273, 139, 136]
+oneface     eta 2.8-3.0: tracks  6042 purity 0.9769 | matched  5202 (0.9912) duplicates   840 (0.8880) | without explosions: tracks  5870 purity 0.9842, duplicates   670
+oneface     eta 3.0-3.2: tracks  6606 purity 0.9616 | matched  5267 (0.9897) duplicates  1339 (0.8510) | without explosions: tracks  6217 purity 0.9767, duplicates   956
+oneface     eta 3.2-3.5: tracks 12192 purity 0.9013 | matched  7871 (0.9962) duplicates  4321 (0.7284) | without explosions: tracks  9142 purity 0.9789, duplicates  1291
+            largest numbers of tracks per particle: [519, 481, 385, 379, 278]

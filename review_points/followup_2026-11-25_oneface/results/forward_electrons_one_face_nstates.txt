@@ -1,0 +1,6 @@
+both ele_truth_smeared eta 2.8-3.0: nStates 29.5 nMeas 10.71 | eta 3.0-3.2: nStates 28.7 nMeas 10.46 | eta 3.2-3.5: nStates 22.9 nMeas 9.20
+both ele_seed43 eta 2.8-3.0: nStates 29.4 nMeas 10.68 | eta 3.0-3.2: nStates 28.6 nMeas 10.41 | eta 3.2-3.5: nStates 23.0 nMeas 9.21
+both ele_seed44 eta 2.8-3.0: nStates 29.4 nMeas 10.70 | eta 3.0-3.2: nStates 28.6 nMeas 10.43 | eta 3.2-3.5: nStates 22.9 nMeas 9.16
+oneface ele_truth_smeared eta 2.8-3.0: nStates 22.0 nMeas 10.68 | eta 3.0-3.2: nStates 21.9 nMeas 10.45 | eta 3.2-3.5: nStates 17.2 nMeas 9.20
+oneface ele_seed43 eta 2.8-3.0: nStates 22.0 nMeas 10.70 | eta 3.0-3.2: nStates 21.8 nMeas 10.42 | eta 3.2-3.5: nStates 17.3 nMeas 9.23
+oneface ele_seed44 eta 2.8-3.0: nStates 22.0 nMeas 10.73 | eta 3.0-3.2: nStates 21.9 nMeas 10.44 | eta 3.2-3.5: nStates 17.1 nMeas 9.15

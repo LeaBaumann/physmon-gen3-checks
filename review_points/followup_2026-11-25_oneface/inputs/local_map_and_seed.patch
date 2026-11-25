@@ -1,0 +1,52 @@
+diff -ru -x __pycache__ a/CI/physmon/physmon_common.py b/CI/physmon/physmon_common.py
+--- a/CI/physmon/physmon_common.py	2026-11-25 11:31:56.779327544 +0100
++++ b/CI/physmon/physmon_common.py	2026-11-25 11:31:56.796964205 +0100
+@@ -1,3 +1,4 @@
++import os
+ import collections
+ import argparse
+ import tempfile
+@@ -36,7 +37,7 @@
+ 
+ 
+ def makeSetup() -> PhysmonSetup:
+-    srcdir = Path(__file__).resolve().parent.parent.parent
++    srcdir = Path("<acts source dir>")
+ 
+     parser = argparse.ArgumentParser()
+     parser.add_argument("outdir")
+@@ -46,7 +47,7 @@
+     matMapPath = (
+         Path(tempfile.gettempdir()) / "odd-material-maps-gen3-provisional.json.zst"
+     )
+-    urllib.request.urlretrieve(PROVISIONAL_GEN3_MATERIAL_MAP_URL, matMapPath)
++    matMapPath = Path(os.environ["MATMAP"])
+     matDeco = MaterialMapDecorator(
+         TrackingGeometryMaterialJsonConverter().fromFile(matMapPath)
+     )
+diff -ru -x __pycache__ a/CI/physmon/workflows/physmon_trackfinding_1muon.py b/CI/physmon/workflows/physmon_trackfinding_1muon.py
+--- a/CI/physmon/workflows/physmon_trackfinding_1muon.py	2026-11-25 11:31:56.787197307 +0100
++++ b/CI/physmon/workflows/physmon_trackfinding_1muon.py	2026-11-25 11:31:56.799541480 +0100
+@@ -1,3 +1,4 @@
++import os
+ #!/usr/bin/env python3
+ 
+ import tempfile
+@@ -49,7 +50,7 @@
+         for d in setup.decorators:
+             s.addContextDecorator(d)
+ 
+-        rnd = acts.examples.RandomNumbers(seed=42)
++        rnd = acts.examples.RandomNumbers(seed=int(os.environ.get("SEED", "42")))
+ 
+         addParticleGun(
+             s,
+@@ -200,7 +201,7 @@
+ 
+ 
+ for label, seeding in [
+-    ("ele_truth_smeared", SeedingAlgorithm.TruthSmeared),
++    (os.environ.get("LABEL", "ele_truth_smeared"), SeedingAlgorithm.TruthSmeared),
+ 
+ 
+ 

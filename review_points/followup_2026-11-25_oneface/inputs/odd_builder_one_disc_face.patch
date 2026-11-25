@@ -1,0 +1,10 @@
+--- a/Plugins/DD4hep/src/OpenDataDetectorBuilder.cpp
++++ b/Plugins/DD4hep/src/OpenDataDetectorBuilder.cpp
+@@ -193,7 +193,6 @@
+ 
+     // Endcap: thin disc "pancake" -> both flat faces carry material
+     configureDiscFace(*matNode, Face::NegativeDisc, kMatPhiBins, endcapRBins);
+-    configureDiscFace(*matNode, Face::PositiveDisc, kMatPhiBins, endcapRBins);
+   }
+ 
+   layer->setNavigationPolicyFactory(Acts::NavigationPolicyFactory{}
