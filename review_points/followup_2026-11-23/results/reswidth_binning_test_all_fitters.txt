@@ -1,0 +1,71 @@
+# Local Gen3 runs (physmon workflows, 10000 events), fits redone with physmon binning (100 bins) and 10x finer (1000 bins)
+== KF
+plot                     bins w/ tracks reproduced fail coarse fail fine  median width fine/coarse
+reswidth_d0_vs_eta                   30     30/30            0         0  1.01
+reswidth_d0_vs_pT                    40     40/40            0         0  1.11
+reswidth_z0_vs_eta                   30     30/30            0         0  1.09
+reswidth_z0_vs_pT                    40     40/40            0         0  1.40
+reswidth_phi_vs_eta                  30     26/30            0         0  0.88
+reswidth_phi_vs_pT                   40     36/40            0         0  0.89
+reswidth_theta_vs_eta                30     30/30           15         0  0.79
+reswidth_theta_vs_pT                 40     38/40           13         0  0.38
+reswidth_qop_vs_eta                  30     30/30           30         0  -
+reswidth_qop_vs_pT                   40     40/40           37         0  0.75
+reswidth_qopt_vs_eta                 30     30/30           14         0  0.60
+reswidth_qopt_vs_pT                  40     40/40            4         0  0.39
+== GX2F
+plot                     bins w/ tracks reproduced fail coarse fail fine  median width fine/coarse
+reswidth_d0_vs_eta                   30     30/30            0         0  0.99
+reswidth_d0_vs_pT                    40     40/40            0         0  1.10
+reswidth_z0_vs_eta                   30     30/30            0         0  1.09
+reswidth_z0_vs_pT                    40     40/40            0         0  1.39
+reswidth_phi_vs_eta                  30     30/30            0         0  0.90
+reswidth_phi_vs_pT                   40     40/40            0         0  0.92
+reswidth_theta_vs_eta                30     29/30           13         0  0.71
+reswidth_theta_vs_pT                 40     37/40           11         0  0.37
+reswidth_qop_vs_eta                  30     30/30           29         0  0.28
+reswidth_qop_vs_pT                   40     40/40           37         0  0.82
+reswidth_qopt_vs_eta                 30     30/30           13         0  0.58
+reswidth_qopt_vs_pT                  40     40/40            9         0  0.39
+== KF refit
+plot                     bins w/ tracks reproduced fail coarse fail fine  median width fine/coarse
+reswidth_d0_vs_eta                   30     30/30            0         0  1.00
+reswidth_d0_vs_pT                    40     40/40            0         0  1.09
+reswidth_z0_vs_eta                   30     30/30            0         0  1.14
+reswidth_z0_vs_pT                    40     40/40            0         0  1.39
+reswidth_phi_vs_eta                  30     29/30            0         0  0.88
+reswidth_phi_vs_pT                   40     39/40            0         0  0.90
+reswidth_theta_vs_eta                30     29/30           13         0  0.72
+reswidth_theta_vs_pT                 40     38/40           13         1  0.43
+reswidth_qop_vs_eta                  30     30/30           29         0  0.13
+reswidth_qop_vs_pT                   40     40/40           37         0  0.77
+reswidth_qopt_vs_eta                 30     30/30           14         0  0.60
+reswidth_qopt_vs_pT                  40     40/40            7         0  0.38
+== GSF
+plot                     bins w/ tracks reproduced fail coarse fail fine  median width fine/coarse
+reswidth_d0_vs_eta                   30     30/30            0         0  1.13
+reswidth_d0_vs_pT                    40     40/40            0         0  1.38
+reswidth_z0_vs_eta                   30     30/30            0         1  1.10
+reswidth_z0_vs_pT                    40     40/40            0         1  1.85
+reswidth_phi_vs_eta                  30     28/30            0         1  1.04
+reswidth_phi_vs_pT                   40     37/40            1         6  1.21
+reswidth_theta_vs_eta                30     29/30            6         1  0.53
+reswidth_theta_vs_pT                 40     39/40            5         1  0.45
+reswidth_qop_vs_eta                  30     30/30            0        15  0.47
+reswidth_qop_vs_pT                   40     38/40            3        18  0.67
+reswidth_qopt_vs_eta                 30     30/30            0        11  9.78
+reswidth_qopt_vs_pT                  40     39/40            1        18  13.03
+== GSF refit
+plot                     bins w/ tracks reproduced fail coarse fail fine  median width fine/coarse
+reswidth_d0_vs_eta                   30     30/30            0         0  1.18
+reswidth_d0_vs_pT                    40     40/40            0         0  1.41
+reswidth_z0_vs_eta                   30     30/30            0         0  1.20
+reswidth_z0_vs_pT                    40     40/40            0         1  1.82
+reswidth_phi_vs_eta                  30     28/30            1         2  0.98
+reswidth_phi_vs_pT                   40     39/40            0         2  1.36
+reswidth_theta_vs_eta                30     27/30            7         0  0.55
+reswidth_theta_vs_pT                 40     36/40            5         1  0.45
+reswidth_qop_vs_eta                  30     30/30            0        18  0.54
+reswidth_qop_vs_pT                   40     40/40            1        12  0.63
+reswidth_qopt_vs_eta                 30     30/30            0        14  8.94
+reswidth_qopt_vs_pT                  40     40/40            0        19  17.07

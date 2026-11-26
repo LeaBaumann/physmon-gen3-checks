@@ -1,0 +1,81 @@
+--- a/Examples/Scripts/Python/colliderml_truth_tracking.py
++++ b/Examples/Scripts/Python/colliderml_truth_tracking.py
+@@ -37,6 +37,7 @@
+     geoIdMapSourcePrefix: str = "gen1",
+     geoIdMapTargetPrefix: str = "gen3",
+     decorators=[],
++    geoSelectionConfigFile: Optional[Path] = None,
+     events: Optional[int] = None,
+     numThreads: int = 1,
+     s: Optional[acts.examples.Sequencer] = None,
+@@ -59,6 +60,9 @@
+     (Sequencer, PythonPatternRecognitionPerformanceWriter)
+         Call s.run() on the sequencer, then access perf_writer.histograms().
+     """
++    if geoSelectionConfigFile is None:
++        geoSelectionConfigFile = _srcdir / "Examples/Configs/odd-seeding-config.json"
++
+     outputDir = Path(outputDir)
+     outputDir.mkdir(parents=True, exist_ok=True)
+ 
+@@ -109,7 +113,7 @@
+         seedingAlgorithm=SeedingAlgorithm.TruthEstimated,
+         paramEstimationSpacePoints=acts.examples.SeedSpacePointSelection.SpreadTriplet,
+         selectedParticles="particles_selected",
+-        geoSelectionConfigFile=_srcdir / "Examples/Configs/odd-seeding-config.json",
++        geoSelectionConfigFile=geoSelectionConfigFile,
+         initialSigmas=[
+             1 * u.mm,
+             1 * u.mm,
+--- a/Python/Examples/tests/root_file_hashes.txt
++++ b/Python/Examples/tests/root_file_hashes.txt
+@@ -101,6 +101,7 @@
+ test_colliderml_truth_tracking[gen3]__tracksummary_kf.root: f7f6aadfb7810b3a71c46321a2d90af3dabdd7cf96203caae0f8b9222465a82d
+ test_colliderml_truth_tracking[gen3]__performance_kf.root: e001a0b3bd9c1e0b6429b1daa9c9d2fd1b197a6567391a7091132ee605d9aba9
+ test_colliderml_truth_tracking[gen1]__performance_colliderml_truth_tracking.root: 856c19b545064b611691c940c0548955412ac19def70cb15d70b7763f44834c8
++test_colliderml_truth_tracking[gen3]__performance_colliderml_truth_tracking.root: 856c19b545064b611691c940c0548955412ac19def70cb15d70b7763f44834c8
+ test_digitization_example[smeared]__clusters.root: bc1bdc8ee1258c6a3fedc2cec23b688cbbed1dcd75428634b06a744d8ee79b0b
+ test_digitization_example[geometric]__clusters.root: 0dc11d620c353288fc6f633aaf17362b06dd55ea0a580ae7cbb697f70ae8422d
+ test_digitization_example_input[smeared]__clusters.root: eee54b72155d487457fd98ba04ab1b84e495f4614200a0b4d5ed3bf69709a5db
+--- a/Python/Examples/tests/test_colliderml_reader.py
++++ b/Python/Examples/tests/test_colliderml_reader.py
+@@ -46,13 +46,6 @@
+     KF tracking on it, for both gen1 (no geo-id map needed) and gen3 (geo-id
+     map generated on the fly) reconstruction geometries. Also checks that the
+     dataset's own published tracks are read and converted.
+-
+-    The ROOT performance check now runs for gen3 too, but there is no stored
+-    reference hash for it yet in root_file_hashes.txt -- this is expected to
+-    fail with "Hash lookup key ... not found" until someone with access to
+-    the ColliderML dataset runs it, confirms the tracking performance output
+-    is sane, and adds the reference. Left failing on purpose rather than
+-    skipped, so this isn't silently forgotten.
+     """
+     import acts.root
+     from acts.examples.odd import getOpenDataDetector
+@@ -79,6 +72,7 @@
+         )
+ 
+         ctx = None
++        geoSelectionConfigFile = None
+     else:
+         odd_dir = acts.examples.odd.getOpenDataDetectorDirectory()
+         matDeco = acts.root.RootMaterialDecorator(
+@@ -89,6 +83,9 @@
+         trackingGeometry = detector.trackingGeometry()
+         decorators = detector.contextDecorators()
+         ctx = detector
++        # Examples/Configs holds the Gen3 seeding selection; use the Gen1 one
++        # shipped with the ODD for the Gen1 reconstruction geometry.
++        geoSelectionConfigFile = odd_dir / "config/odd-seeding-config.json"
+ 
+     check_alg = AssertCollectionExistsAlg(
+         "colliderml_tracks", name="check_colliderml_tracks", level=acts.logging.WARNING
+@@ -117,6 +114,7 @@
+             pileup=_PILEUP,
+             geoIdMapPath=geoid_map_path if reco_geo == "gen3" else None,
+             decorators=decorators,
++            geoSelectionConfigFile=geoSelectionConfigFile,
+             numThreads=1,
+         )
+         s.addAlgorithm(check_alg)
