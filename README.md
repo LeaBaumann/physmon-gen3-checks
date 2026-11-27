@@ -40,6 +40,14 @@ browser) and `simulation.log`.
   shape (KS 0.005), i.e. the newly mapped tracker material. histcmp still
   fails, mainly on ResidualCheck and KolmogorovTest. The kill volume has no
   effect on Fatras (2 and 3 are identical).
+
+  ![Fatras: Gen1 vs Gen3 with and without collector material](plots/overlay_fatras.png)
+
+  Gen1 here is the local run `0_gen1_local` (6 244 particles; the CI
+  reference has 6 172). With the collector material (orange) Gen3 has the
+  peak of particles at 3 X0 (overflow), many more particles with 0–1 hits
+  and at all η; with the collector bins set to vacuum (aqua) these vanish and
+  the ratio to Gen1 is close to 1 everywhere except in sparsely filled bins.
 - **Geant4: the larger kill volume is the only cause.** Geant4 does not use
   the ACTS material map (1 and 2 are identical). With a kill volume of the
   Gen1 extent, the Geant4 particles are bit-identical to `0_gen1_local` in all
@@ -50,6 +58,17 @@ browser) and `simulation.log`.
   "RNG wiggling" in the histograms. The remaining 6 particles difference to
   the CI reference (97 135 vs. 97 129) also appear in `0_gen1_local`, so they
   come from the local environment, not from Gen3.
+
+  ![Geant4: Gen1 vs Gen3 with the Gen3 and the Gen1 kill volume](plots/overlay_geant4.png)
+
+  Geant4 does not fill `total_x0`, so the first panel shows the momentum.
+  With the Gen1 kill volume (aqua) all 20 physmon histograms are bin-by-bin
+  identical to Gen1 (ratio exactly 1); with the Gen3 kill volume (orange) there
+  are 1 604 more particles and small shifts, mostly at few hits.
+
+  Both plots: `python3 scripts/overlay_simulation.py fatras|geant4` from the
+  root of this repository (needs `uproot`, `numpy`, `matplotlib`; reads only
+  the `particles_*_hist.root` files of the variant folders).
 
 ## How the variants were produced
 
